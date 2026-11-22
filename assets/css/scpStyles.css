@@ -1,0 +1,86 @@
+/* Toast Container */
+#scp-toast-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Toast */
+.scp-toast {
+  min-width: 260px;
+  max-width: 400px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: scpFadeIn 0.3s ease;
+  position: relative;
+}
+
+/* Icons */
+.scp-toast i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Close Button */
+.scp-toast-close {
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+.scp-toast-close:hover {
+  opacity: 1;
+}
+
+/* Bootstrap-like Colors */
+.scp-primary {
+  background: #0d6efd;
+}
+.scp-secondary {
+  background: #6c757d;
+}
+.scp-success {
+  background: #198754;
+}
+.scp-danger {
+  background: #dc3545;
+}
+.scp-warning {
+  background: #ffc107;
+  color: #000;
+}
+.scp-info {
+  background: #0dcaf0;
+  color: #000;
+}
+.scp-dark {
+  background: #212529;
+}
+.scp-light {
+  background: #f8f9fa;
+  color: #000;
+}
+
+/* Animation */
+@keyframes scpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

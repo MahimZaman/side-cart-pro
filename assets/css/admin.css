@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --font: "Inter", sans-serif;
+  --border-color: #d9d9d9;
+}
+
+.scp-admin-wrap {
+  font-family: Inter, system-ui, sans-serif;
+  background: #f9fafb;
+  padding: 30px;
+}
+
+.scp-header h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.scp-layout {
+  display: flex;
+  margin-top: 30px;
+  gap: 24px;
+}
+
+.scp-tabs {
+  width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+}
+
+.scp-tabs button {
+  width: 100%;
+  padding: 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.scp-tabs button.active {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.scp-content {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.scp-panel {
+  display: none;
+}
+
+.scp-panel.active {
+  display: block;
+}
+
+.scp-color-group {
+  display: flex;
+  gap: 12px;
+}
+
+.scp-color span {
+  width: 36px;
+  height: 36px;
+  display: block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.scp-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.scp-toggle input {
+  display: none;
+}
+
+.scp-toggle span {
+  width: 40px;
+  height: 22px;
+  background: #d1d5db;
+  border-radius: 999px;
+  position: relative;
+}
+
+.scp-toggle span::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.scp-toggle input:checked + span {
+  background: #4f46e5;
+}
+
+.scp-toggle input:checked + span::after {
+  left: 20px;
+}
+
+/* Cart Item CSS */
+.scp-cart-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.scp-item-image img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.scp-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.scp-item-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--scp-text);
+  text-decoration: none;
+}
+
+.scp-item-title:hover {
+  text-decoration: underline;
+}
+
+.scp-item-variations {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.scp-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.scp-qty {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.scp-qty button {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #f3f4f6;
+  border: none;
+  cursor: pointer;
+}
+
+.scp-qty-input {
+  width: 40px;
+  text-align: center;
+}
+
+.scp-remove {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.scp-field {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 650px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.scp-field label {
+  font-size: 14px;
+  color: #121212;
+  font-weight: 400;
+  font-family: var(--font);
+}
+
+.scp-field input {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: var(--font);
+  color: #121212;
+  line-height: 1.5;
+}
+
+.scp-field input:focus {
+  outline-color: #eef2ff !important;
+  border-color: #4f46e5 !important;
+}
+
+/* Cart Item CSS Ends */
